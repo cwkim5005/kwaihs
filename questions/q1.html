@@ -8,8 +8,53 @@
       p{
         line-height:150%;
       }
+      body{
+        background-color: #ffff
+      }
+      h1{
+        text-align: center;
+      }
+      h2{
+        text-align: center;
+        font-size: x-large;
+      }
       img{
         text-align: center;
+        display: block;
+        margin: auto;
+      }
+      p{
+        text-align: center;
+      }
+      #answer{
+        display: block;
+        margin: auto;
+        width: 250px;
+        height: 50px;
+        border-radius: 0px;
+        border-width: medium;
+        font-weight: bold;
+        font-size: large;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        text-align: center;
+      }
+      #button{
+        display: block;
+        margin: auto;
+        width: 100px;
+        height: 60px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-width: medium;
+        font-weight: bold;
+        font-size: large;
+      }
+      table{
+        display: block;
+        margin: auto;
+        position: relative;
+        width: 57%
       }
     </style>
     <script>
@@ -32,8 +77,16 @@
       <strong>2 + 2 × 2 = ?</strong>
     </p>
     <form name="quiz">
-      <input type="text" name="answer" />
-      <input type="button" value="정답 확인" onClick="getAnswer()">
+      <table>
+        <tr>
+          <td>
+            <input type="text" name="answer" id="answer"/>
+          </td>
+          <td>
+            <input type="button" value="정답 확인" onClick="getAnswer()" id="button">
+          </td>
+        </tr>
+      </table>
     </form>
   </body>
 </html>
