@@ -15,13 +15,7 @@
          display: inline-block;
       }
       p{
-        line-height:300%;
-      }
-      #ch_sun{
-        color:#00008B;
-      }
-      #ch_do{
-        color:#8B0000;
+        line-height:150%;
       }
     </style>
     <script>
@@ -35,19 +29,17 @@
     </script>
   </head>
   <body>
-    <h1>스토리 1번</h1>
-
-    <img src="assets\logo.png" width="400" height="300" alt="로고 이미지" title="로고 이미지">
-
+    <h1>문제 1번</h1>
+    <h2>
+      1. 퍼즐을 풀어라!
+    </h2>
+    <img src="..\assets\logo.png" width="400" height="300" alt="로고 이미지" title="로고 이미지">
     <p>
-      <strong id="ch_sun">김선진</strong> : 뭐야? 무슨일이 일어난거야?<br>
-      <strong id="ch_do">최도윤</strong> : 나도 모르겠어!<br>
-      <strong id="ch_sun">김선진</strong> : 문제를 적는 칸에 "정답"을 적어보자!<br>
-      <strong id="ch_do">최도윤</strong> : 그래!<br>
+      위에는 대충 퍼즐 이미지 그리고 정답을 아래에 적으십시오. (정답 : 정답)
     </p>
-
-    <form action="questions\q1.html">
-      <input type="submit" value="문제 풀기">
+    <form name="quiz">
+      <input type="text" name="answer" />
+      <input type="button" value="정답 확인" onClick="getAnswer()">
     </form>
   </body>
 </html>
