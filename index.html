@@ -5,23 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>좀비를 피해서 도망가</title>
     <style media="screen">
-      .centeringContainer{
+      h1{
         text-align: center;
       }
-      .centered{
-        display: table;
-         margin-left: auto;
-         margin-right: auto;
-         display: inline-block;
+      img{
+        text-align: center;
+        display: block;
+        margin: auto;
       }
-      p{
+      div{
+        position: relative;
         line-height:300%;
+        left: 220px;
       }
       #ch_sun{
         color:#00008B;
       }
       #ch_do{
         color:#8B0000;
+      }
+      #button{
+        display: block;
+        margin: auto;
+        width: 200px;
+        height: 50px;
+        border-radius: 50px;
       }
     </style>
     <script>
@@ -39,15 +47,16 @@
 
     <img src="assets\logo.png" width="400" height="300" alt="로고 이미지" title="로고 이미지">
 
-    <p>
+    <div>
+      <br>
       <strong id="ch_sun">김선진</strong> : 뭐야? 무슨일이 일어난거야?<br>
       <strong id="ch_do">최도윤</strong> : 나도 모르겠어!<br>
       <strong id="ch_sun">김선진</strong> : 문제를 적는 칸에 "정답"을 적어보자!<br>
-      <strong id="ch_do">최도윤</strong> : 그래!<br>
-    </p>
+      <strong id="ch_do">최도윤</strong> : 그래!<br><br>
+    </div>
 
     <form action="questions\q1.html">
-      <input type="submit" value="문제 풀기">
+      <input type="submit" value="문제 풀기" id="button">
     </form>
   </body>
 </html>

@@ -5,23 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>좀비를 피해서 도망가</title>
     <style media="screen">
-      .centeringContainer{
-        text-align: center;
-      }
-      .centered{
-        display: table;
-         margin-left: auto;
-         margin-right: auto;
-         display: inline-block;
-      }
       p{
         line-height:150%;
+      }
+      img{
+        text-align: center;
       }
     </style>
     <script>
       function getAnswer(){
-        if(quiz.answer.value == "정답"){
-          alert("정답입니다.");
+        if(quiz.answer.value == "6"){
+          alert("정답입니다.\n체육관으로 가십시오.");
         }else{
           alert("틀렸습니다.")
         }
@@ -31,11 +25,11 @@
   <body>
     <h1>문제 1번</h1>
     <h2>
-      1. 퍼즐을 풀어라!
+      1. 초등학생들도 푸는 사칙연산 문제!
     </h2>
     <img src="..\assets\logo.png" width="400" height="300" alt="로고 이미지" title="로고 이미지">
     <p>
-      위에는 대충 퍼즐 이미지 그리고 정답을 아래에 적으십시오. (정답 : 정답)
+      <strong>2 + 2 × 2 = ?</strong>
     </p>
     <form name="quiz">
       <input type="text" name="answer" />
