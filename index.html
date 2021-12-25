@@ -7,12 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
-    <style media="screen">
+    <style>
       *{
         font-family: 'Song Myung', serif;
       }
       body{
         background-color: #C9CBD8
+      }
+      p{
+        line-height:150%;
       }
       h1{
         text-align: center;
@@ -26,53 +29,67 @@
         display: block;
         margin: auto;
       }
-      div{
-        line-height:300%;
+      p{
+        text-align: center;
         font-size: large;
       }
-      #ch_sun{
-        color:#00008B;
-      }
-      #ch_do{
-        color:#8B0000;
+      #answer{
+        display: block;
+        margin: auto;
+        width: 250px;
+        height: 50px;
+        border-radius: 0px;
+        border-width: medium;
+        font-weight: bold;
+        font-size: large;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        text-align: center;
       }
       #button{
         display: block;
         margin: auto;
-        width: 200px;
-        height: 50px;
-        border-radius: 50px;
+        width: 100px;
+        height: 60px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
         border-width: medium;
         font-weight: bold;
         font-size: large;
       }
+      table{
+        display: block;
+        margin: auto;
+        position: relative;
+      }
     </style>
     <script>
       function getAnswer(){
-        if(quiz.answer.value == "정답"){
-          alert("정답입니다.");
+        if(password.answer.value == "1234"){
+          location.replace("scripts/s1.html")
         }else{
-          alert("틀렸습니다.")
+          alert("비밀번호가 틀렸습니다.")
         }
       }
     </script>
   </head>
   <body>
-    <h1>대충 제목</h1>
-
+    <h1>좀비를 피해서 도망가</h1>
     <img src="assets\logo.png" width="300" height="225" alt="로고 이미지" title="로고 이미지">
     <h2>
-      제1장: 무언가 일어나고 있다.
+      비밀번호를 입력하십시오.
     </h2>
-    <div>
-      <strong id="ch_sun">김선진</strong> : 뭐야? 무슨일이 일어난거야?<br>
-      <strong id="ch_do">최도윤</strong> : 나도 모르겠어!<br>
-      <strong id="ch_sun">김선진</strong> : 문제를 적는 칸에 "정답"을 적어보자!<br>
-      <strong id="ch_do">최도윤</strong> : 그래!<br><br>
-    </div>
-
-    <form action="questions\q1.html">
-      <input type="submit" value="문제 풀기" id="button">
+    <form name="password">
+      <table>
+        <tr>
+          <td>
+            <input type="text" name="answer" id="answer"/>
+          </td>
+          <td>
+            <input type="button" value="확인" onClick="getAnswer()" id="button">
+          </td>
+        </tr>
+      </table>
     </form>
   </body>
 </html>
