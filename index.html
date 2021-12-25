@@ -67,6 +67,8 @@
       function getAnswer(){
         if(password.answer.value == "1234"){
           location.replace("scripts/s1.html")
+        }else if (password.answer.value == "4321") {
+          location.replace("questions/q2.html")
         }else{
           alert("비밀번호가 틀렸습니다.")
         }
