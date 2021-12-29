@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
-    <style>
+    <style type="text/css">
       *{
         font-family: 'Song Myung', serif;
       }
@@ -23,6 +23,12 @@
       h2{
         text-align: center;
         font-size: x-large;
+      }
+      table{
+        text-align: center;
+        font-size: x-large;
+        margin: auto;
+        border-spacing: 10px;
       }
       img{
         text-align: center;
@@ -57,14 +63,10 @@
         font-weight: bold;
         font-size: large;
       }
-      table{
-        text-align: center;
-        margin: auto;
-      }
     </style>
     <script>
       function getAnswer(){
-        if(quiz.answer.value == "59372418"){
+        if(quiz.answer.value == "13"){
           alert("정답입니다.");
         }else{
           alert("틀렸습니다.")
@@ -73,11 +75,35 @@
     </script>
   </head>
   <body>
-    <h1>문제 2번</h1>
+    <h1>문제 3번</h1>
     <h2>
-      핀패드 문제
+      A × B + C = ?
     </h2>
-    <img src="..\assets\pin_pad.gif" width="400" height="225" alt="로고 이미지" title="로고 이미지">
+    <table>
+      <tbody>
+        <tr>
+          <td>2</td> <td>2</td> <td>0</td> <td>4</td>
+        </tr>
+        <tr>
+          <td>4</td> <td style="color:white">A</td> <td>0</td> <td>8</td>
+        </tr>
+        <tr>
+          <td>6</td> <td>4</td> <td>2</td> <td>4</td>
+        </tr>
+        <tr>
+          <td>8</td> <td>4</td> <td>3</td> <td>2</td>
+        </tr>
+        <tr>
+          <td>9</td> <td>7</td> <td style="color:white">B</td> <td>3</td>
+        </tr>
+        <tr>
+          <td>3</td> <td>4</td> <td>1</td> <td>2</td>
+        </tr>
+        <tr>
+          <td>2</td> <td style="color:white">C</td> <td>0</td> <td>2</td>
+        </tr>
+      </tbody>
+    </table>
     <form name="quiz">
       <table>
         <tr>
