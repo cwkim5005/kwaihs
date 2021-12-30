@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script>
+
+    <meta name="unicode" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>좀비를 피해서 도망가</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+    <style>
+      *{
+        font-family: 'Song Myung', serif;
+        color: #1a7a4c
+      }
+      body{
+        background-color: #101820
+      }
+      p{
+        line-height:150%;
+      }
+      h1{
+        text-align: center;
+        color: #C7D4CA
+      }
+      h2{
+        text-align: center;
+        font-size: x-large;
+      }
+      img{
+        text-align: center;
+        display: block;
+        margin: auto;
+      }
+      p{
+        text-align: center;
+        font-size: large;
+      }
+      table{
+        text-align: center;
+        margin: auto;
+      }
+      #drag_wrap {
+        width:500px;
+        height:370px;
+        border: solid 10px #C7D4CA;
+        margin: auto
+      }
+      #drag_box, #drag_box2, #drag_box3,
+      #drag_box4, #drag_box5, #drag_box6,
+      #drag_box7, #drag_box8, #drag_box9{
+        width: 90px;
+        height: 90px;
+        padding: 0.5em;
+        float: left;
+        margin: 5px 10px 10px 5px;
+        border: solid 1px blue;
+      }
+    </style>
+    <script>
+      function getAnswer(){
+        if(quiz.answer.value == "33"){
+          alert("정답입니다.");
+        }else{
+          alert("틀렸습니다.")
+        }
+      }
+      $(function(){
+        $("#drag_box").draggable({ revert : false});
+        $("#drag_box2").draggable({ revert : false});
+      });
+    </script>
+  </head>
+  <body>
+    <h1>문제 4번</h1>
+    <h2>
+      세그먼트
+    </h2>
+    <div id="drag_wrap">
+      <div id="drag_box"> <p>드래그 해</p> </div>
+      <div id="drag_box2"> <p>드래그 해</p> </div>
+      <div id="drag_box3"> <p>드래그 해</p> </div>
+      <div id="drag_box4"> <p>드래그 해</p> </div>
+      <div id="drag_box5"> <p>드래그 해</p> </div>
+      <div id="drag_box6"> <p>드래그 해</p> </div>
+      <div id="drag_box7"> <p>드래그 해</p> </div>
+      <div id="drag_box8"> <p>드래그 해</p> </div>
+      <div id="drag_box9"> <p>드래그 해</p> </div>
+    </div>
+    <br>
+    <br>
+  </body>
+</html>
