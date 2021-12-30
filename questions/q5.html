@@ -44,30 +44,24 @@
         margin: auto;
       }
       #drag_wrap {
-        width:500px;
-        height:370px;
+        width:350px;
+        height:260px;
         border: solid 10px #C7D4CA;
-        margin: auto
+        margin: auto;
       }
       #drag_box, #drag_box2, #drag_box3,
       #drag_box4, #drag_box5, #drag_box6,
-      #drag_box7, #drag_box8, #drag_box9{
-        width: 90px;
-        height: 90px;
+      #drag_box7, #drag_box8, #drag_box9,
+      #drag_box10, #drag_box11, #drag_box12{
+        width: 69px;
+        height: 69px;
         padding: 0.5em;
         float: left;
-        margin: 5px 10px 10px 5px;
+        margin: auto;
         border: solid 1px blue;
       }
     </style>
     <script>
-      function getAnswer(){
-        if(quiz.answer.value == "33"){
-          alert("정답입니다.");
-        }else{
-          alert("틀렸습니다.")
-        }
-      }
       $(function(){
         $("#drag_box").sortable({ revert : false});
         $("#drag_box2").sortable({ revert : false});
@@ -80,7 +74,7 @@
       세그먼트
     </h2>
     <div id="drag_wrap">
-      <div id="drag_box"> <p>드래dsa그 해</p> </div>
+      <div id="drag_box"> <p>드래그 해</p> </div>
       <div id="drag_box2"> <p>드래그 해</p> </div>
       <div id="drag_box3"> <p>드래그 해</p> </div>
       <div id="drag_box4"> <p>드래그 해</p> </div>
@@ -89,6 +83,9 @@
       <div id="drag_box7"> <p>드래그 해</p> </div>
       <div id="drag_box8"> <p>드래그 해</p> </div>
       <div id="drag_box9"> <p>드래그 해</p> </div>
+      <div id="drag_box10"> <p>드래그 해</p> </div>
+      <div id="drag_box11"> <p>드래그 해</p> </div>
+      <div id="drag_box12"> <p>드래그 해</p> </div>
     </div>
     <br>
     <br>
