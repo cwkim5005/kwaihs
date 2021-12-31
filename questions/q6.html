@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="unicode" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>좀비를 피해서 도망가</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+    <style type="text/css">
+      *{
+        font-family: 'Song Myung', serif;
+        color: #1a7a4c
+      }
+      body{
+        background-color: #101820
+      }
+      p{
+        line-height:150%;
+      }
+      h1{
+        text-align: center;
+        color: #C7D4CA
+      }
+      h2{
+        text-align: center;
+        font-size: x-large;
+      }
+      img{
+        text-align: center;
+        display: block;
+        margin: auto;
+      }
+      p{
+        text-align: center;
+        font-size: large;
+      }
+      #answer{
+        display: block;
+        margin: auto;
+        width: 250px;
+        height: 50px;
+        border-radius: 0px;
+        border-width: medium;
+        font-weight: bold;
+        font-size: large;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        text-align: center;
+      }
+      #button{
+        display: block;
+        margin: auto;
+        width: 100px;
+        height: 60px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-width: medium;
+        font-weight: bold;
+        font-size: large;
+        color: #101820
+      }
+      table{
+        text-align: center;
+        margin: auto;
+      }
+      #picture{
+        width: 300px;
+        height: 225px;
+        background-image: url("../assets/images/picture2.png");
+        background-size: 300px 225px;
+        margin: auto;
+      }
+      #picture:active{
+        background-image: url("../assets/images/picture1.png");
+        background-size: 300px 225px;
+      }
+    </style>
+    <script>
+      function getAnswer(){
+        if(quiz.answer.value == "33"){
+          alert("정답입니다.");
+        }else{
+          alert("틀렸습니다.")
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>문제 4번</h1>
+    <h2>
+      세그먼트
+    </h2>
+    <div id="picture"></div>
+    <br>
+    <br>
+    <form name="quiz">
+      <table>
+        <tr>
+          <td>
+            <input type="text" name="answer" id="answer"/>
+          </td>
+          <td>
+            <input type="button" value="정답 확인" onClick="getAnswer()" id="button">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
