@@ -3,7 +3,6 @@
   <head>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.js"></script>
 
     <meta name="unicode" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -43,49 +42,131 @@
         text-align: center;
         margin: auto;
       }
-      #drag_wrap {
+      #box {
         width:350px;
         height:260px;
         border: solid 10px #C7D4CA;
         margin: auto;
       }
-      #drag_box, #drag_box2, #drag_box3,
-      #drag_box4, #drag_box5, #drag_box6,
-      #drag_box7, #drag_box8, #drag_box9,
-      #drag_box10, #drag_box11, #drag_box12{
-        width: 69px;
-        height: 69px;
+      #d1, #d2, #d3, 
+      #d4, #d5, #d6, 
+      #d7, #d8, #d9{
+        width: 70px;
+        height: 70px;
         padding: 0.5em;
         float: left;
         margin: auto;
-        border: solid 1px blue;
+        border: solid 0px blue;
+        background-image: url(../assets/images/dice/1.png);
+        background-size: 86px;
+
+      }
+      #space{
+        width: 84px;
+        height: 84px;
+        float: left;
+        margin: auto;
+        border: solid 1px black;
       }
     </style>
     <script>
-      $(function(){
-        $("#drag_box").sortable({ revert : false});
-        $("#drag_box2").sortable({ revert : false});
-      });
+      var dice_arr = [1,1,1,1,1,1,1,1,1];
+      
+
+      function dice_change(i){
+        dice_arr[i]++;
+        
+        if(dice_arr[i] == 7) dice_arr[i] = 1;
+
+        if(dice_arr[i] == 1){
+          if(i == 0) document.getElementById('d1').style.backgroundImage = "url(../assets/images/dice/1.png)";
+          if(i == 1) document.getElementById('d2').style.backgroundImage = "url(../assets/images/dice/1.png)";
+          if(i == 2) document.getElementById('d3').style.backgroundImage = "url(../assets/images/dice/1.png)";
+          if(i == 3) document.getElementById('d4').style.backgroundImage = "url(../assets/images/dice/1.png)";
+          if(i == 4) document.getElementById('d5').style.backgroundImage = "url(../assets/images/dice/1.png)";
+          if(i == 5) document.getElementById('d6').style.backgroundImage = "url(../assets/images/dice/1.png)";
+          if(i == 6) document.getElementById('d7').style.backgroundImage = "url(../assets/images/dice/1.png)";
+          if(i == 7) document.getElementById('d8').style.backgroundImage = "url(../assets/images/dice/1.png)";
+          if(i == 8) document.getElementById('d9').style.backgroundImage = "url(../assets/images/dice/1.png)";
+        }
+        if(dice_arr[i] == 2){
+          if(i == 0) document.getElementById('d1').style.backgroundImage = "url(../assets/images/dice/2.png)";
+          if(i == 1) document.getElementById('d2').style.backgroundImage = "url(../assets/images/dice/2.png)";
+          if(i == 2) document.getElementById('d3').style.backgroundImage = "url(../assets/images/dice/2.png)";
+          if(i == 3) document.getElementById('d4').style.backgroundImage = "url(../assets/images/dice/2.png)";
+          if(i == 4) document.getElementById('d5').style.backgroundImage = "url(../assets/images/dice/2.png)";
+          if(i == 5) document.getElementById('d6').style.backgroundImage = "url(../assets/images/dice/2.png)";
+          if(i == 6) document.getElementById('d7').style.backgroundImage = "url(../assets/images/dice/2.png)";
+          if(i == 7) document.getElementById('d8').style.backgroundImage = "url(../assets/images/dice/2.png)";
+          if(i == 8) document.getElementById('d9').style.backgroundImage = "url(../assets/images/dice/2.png)";
+        }
+        if(dice_arr[i] == 3){
+          if(i == 0) document.getElementById('d1').style.backgroundImage = "url(../assets/images/dice/3.png)";
+          if(i == 1) document.getElementById('d2').style.backgroundImage = "url(../assets/images/dice/3.png)";
+          if(i == 2) document.getElementById('d3').style.backgroundImage = "url(../assets/images/dice/3.png)";
+          if(i == 3) document.getElementById('d4').style.backgroundImage = "url(../assets/images/dice/3.png)";
+          if(i == 4) document.getElementById('d5').style.backgroundImage = "url(../assets/images/dice/3.png)";
+          if(i == 5) document.getElementById('d6').style.backgroundImage = "url(../assets/images/dice/3.png)";
+          if(i == 6) document.getElementById('d7').style.backgroundImage = "url(../assets/images/dice/3.png)";
+          if(i == 7) document.getElementById('d8').style.backgroundImage = "url(../assets/images/dice/3.png)";
+          if(i == 8) document.getElementById('d9').style.backgroundImage = "url(../assets/images/dice/3.png)";
+        }
+        if(dice_arr[i] == 4){
+          if(i == 0) document.getElementById('d1').style.backgroundImage = "url(../assets/images/dice/4.png)";
+          if(i == 1) document.getElementById('d2').style.backgroundImage = "url(../assets/images/dice/4.png)";
+          if(i == 2) document.getElementById('d3').style.backgroundImage = "url(../assets/images/dice/4.png)";
+          if(i == 3) document.getElementById('d4').style.backgroundImage = "url(../assets/images/dice/4.png)";
+          if(i == 4) document.getElementById('d5').style.backgroundImage = "url(../assets/images/dice/4.png)";
+          if(i == 5) document.getElementById('d6').style.backgroundImage = "url(../assets/images/dice/4.png)";
+          if(i == 6) document.getElementById('d7').style.backgroundImage = "url(../assets/images/dice/4.png)";
+          if(i == 7) document.getElementById('d8').style.backgroundImage = "url(../assets/images/dice/4.png)";
+          if(i == 8) document.getElementById('d9').style.backgroundImage = "url(../assets/images/dice/4.png)";
+        }
+        if(dice_arr[i] == 5){
+          if(i == 0) document.getElementById('d1').style.backgroundImage = "url(../assets/images/dice/5.png)";
+          if(i == 1) document.getElementById('d2').style.backgroundImage = "url(../assets/images/dice/5.png)";
+          if(i == 2) document.getElementById('d3').style.backgroundImage = "url(../assets/images/dice/5.png)";
+          if(i == 3) document.getElementById('d4').style.backgroundImage = "url(../assets/images/dice/5.png)";
+          if(i == 4) document.getElementById('d5').style.backgroundImage = "url(../assets/images/dice/5.png)";
+          if(i == 5) document.getElementById('d6').style.backgroundImage = "url(../assets/images/dice/5.png)";
+          if(i == 6) document.getElementById('d7').style.backgroundImage = "url(../assets/images/dice/5.png)";
+          if(i == 7) document.getElementById('d8').style.backgroundImage = "url(../assets/images/dice/5.png)";
+          if(i == 8) document.getElementById('d9').style.backgroundImage = "url(../assets/images/dice/5.png)";
+        }
+        if(dice_arr[i] == 6){
+          if(i == 0) document.getElementById('d1').style.backgroundImage = "url(../assets/images/dice/6.png)";
+          if(i == 1) document.getElementById('d2').style.backgroundImage = "url(../assets/images/dice/6.png)";
+          if(i == 2) document.getElementById('d3').style.backgroundImage = "url(../assets/images/dice/6.png)";
+          if(i == 3) document.getElementById('d4').style.backgroundImage = "url(../assets/images/dice/6.png)";
+          if(i == 4) document.getElementById('d5').style.backgroundImage = "url(../assets/images/dice/6.png)";
+          if(i == 5) document.getElementById('d6').style.backgroundImage = "url(../assets/images/dice/6.png)";
+          if(i == 6) document.getElementById('d7').style.backgroundImage = "url(../assets/images/dice/6.png)";
+          if(i == 7) document.getElementById('d8').style.backgroundImage = "url(../assets/images/dice/6.png)";
+          if(i == 8) document.getElementById('d9').style.backgroundImage = "url(../assets/images/dice/6.png)";
+        }
+        
+        console.log(dice_arr[i]);
+        }
     </script>
   </head>
   <body>
     <h1>문제 4번</h1>
     <h2>
-      세그먼트
+      주사위
     </h2>
-    <div id="drag_wrap">
-      <div id="drag_box"> <p>드래그 해</p> </div>
-      <div id="drag_box2"> <p>드래그 해</p> </div>
-      <div id="drag_box3"> <p>드래그 해</p> </div>
-      <div id="drag_box4"> <p>드래그 해</p> </div>
-      <div id="drag_box5"> <p>드래그 해</p> </div>
-      <div id="drag_box6"> <p>드래그 해</p> </div>
-      <div id="drag_box7"> <p>드래그 해</p> </div>
-      <div id="drag_box8"> <p>드래그 해</p> </div>
-      <div id="drag_box9"> <p>드래그 해</p> </div>
-      <div id="drag_box10"> <p>드래그 해</p> </div>
-      <div id="drag_box11"> <p>드래그 해</p> </div>
-      <div id="drag_box12"> <p>드래그 해</p> </div>
+    <div id="box">
+      <div id="space"></div>
+      <img src="..\assets\images\dice\air.png" onclick = "dice_change(0);" id="d1"></img>
+      <img src="..\assets\images\dice\air.png" onclick = "dice_change(1);" id="d2"></img>
+      <img src="..\assets\images\dice\air.png" onclick = "dice_change(2);" id="d3"></img>
+      <img src="..\assets\images\dice\air.png" onclick = "dice_change(3);" id="d4"></img>
+      <img src="..\assets\images\dice\air.png" onclick = "dice_change(4);" id="d5"></img>
+      <img src="..\assets\images\dice\air.png" onclick = "dice_change(5);" id="d6"></img>
+      <div id="space"></div>
+      <div id="space"></div>
+      <img src="..\assets\images\dice\air.png" onclick = "dice_change(6);" id="d7"></img>
+      <img src="..\assets\images\dice\air.png" onclick = "dice_change(7);" id="d8"></img>
+      <img src="..\assets\images\dice\air.png" onclick = "dice_change(8);" id="d9"></img>
     </div>
     <br>
     <br>
