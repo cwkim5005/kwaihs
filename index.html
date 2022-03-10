@@ -35,7 +35,7 @@
         text-align: center;
         font-size: large;
       }
-      #answer{
+      #blank{
         display: block;
         margin: auto;
         width: 250px;
@@ -67,19 +67,19 @@
     </style>
     <script>
       function getAnswer(){
-        if(password.answer.value == "1"){
+        if(password.answer.value == "1번 문제"){
           location.href="questions/q1.html"
-        }else if (password.answer.value == "2") {
+        }else if (password.answer.value == "2번 문제") {
           location.href="questions/q2.html"
-        }else if (password.answer.value == "3") {
+        }else if (password.answer.value == "3번 문제") {
           location.href="questions/q3.html"
-        }else if (password.answer.value == "4") {
+        }else if (password.answer.value == "4번 문제") {
           location.href="questions/q4.html"
-        }else if (password.answer.value == "5") {
+        }else if (password.answer.value == "5번 문제") {
           location.href="questions/q5.html"
-        }else if (password.answer.value == "6") {
+        }else if (password.answer.value == "6번 문제") {
           location.href="questions/q6.html"
-        }else if (password.answer.value == "7") {
+        }else if (password.answer.value == "7번 문제") {
           location.href="questions/q7.html"
         }else{
           alert("비밀번호가 틀렸습니다.")
@@ -97,7 +97,16 @@
       <table>
         <tr>
           <td>
-            <input type="text" name="answer" id="answer"/>
+            <input type="text" name="answer" list="answer" id="blank"/>
+            <datalist id="answer">
+              <option value="1번 문제"></option>
+              <option value="2번 문제"></option>
+              <option value="3번 문제"></option>
+              <option value="4번 문제"></option>
+              <option value="5번 문제"></option>
+              <option value="6번 문제"></option>
+              <option value="7번 문제"></option>
+            </datalist>
           </td>
           <td>
             <input type="button" value="확인" onClick="getAnswer()" id="button">
