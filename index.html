@@ -66,24 +66,28 @@
       }
     </style>
     <script>
+      var progress_bar = 0
       function getAnswer(){
-        if(password.answer.value == "1번 문제"){
+        if(password.answer.value == "문제 1번"){
           location.href="questions/q1.html"
-        }else if (password.answer.value == "2번 문제") {
+        }else if (password.answer.value == "문제 2번") {
           location.href="questions/q2.html"
-        }else if (password.answer.value == "3번 문제") {
+        }else if (password.answer.value == "문제 3번") {
           location.href="questions/q3.html"
-        }else if (password.answer.value == "4번 문제") {
+        }else if (password.answer.value == "문제 4번") {
           location.href="questions/q4.html"
-        }else if (password.answer.value == "5번 문제") {
+        }else if (password.answer.value == "문제 5번") {
           location.href="questions/q5.html"
-        }else if (password.answer.value == "6번 문제") {
+        }else if (password.answer.value == "문제 6번") {
           location.href="questions/q6.html"
-        }else if (password.answer.value == "7번 문제") {
+        }else if (password.answer.value == "문제 7번") {
           location.href="questions/q7.html"
         }else{
           alert("비밀번호가 틀렸습니다.")
         }
+      }
+      function progress() {
+        document.getElementById('pb').value = '20';
       }
     </script>
   </head>
@@ -99,17 +103,20 @@
           <td>
             <input type="text" name="answer" list="answer" id="blank"/>
             <datalist id="answer">
-              <option value="1번 문제"></option>
-              <option value="2번 문제"></option>
-              <option value="3번 문제"></option>
-              <option value="4번 문제"></option>
-              <option value="5번 문제"></option>
-              <option value="6번 문제"></option>
-              <option value="7번 문제"></option>
+              <option value="문제 1번"></option>
+              <option value="문제 2번"></option>
+              <option value="문제 3번"></option>
+              <option value="문제 4번"></option>
+              <option value="문제 5번"></option>
+              <option value="문제 6번"></option>
+              <option value="문제 7번"></option>
             </datalist>
           </td>
           <td>
             <input type="button" value="확인" onClick="getAnswer()" id="button">
+          </td>
+          <td>
+            <progress value="0" min="0" max="70" id="pb"></progress>
           </td>
         </tr>
       </table>

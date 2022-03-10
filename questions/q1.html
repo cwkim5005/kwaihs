@@ -72,12 +72,16 @@
       function getAnswer(){
         if(quiz.answer.value == "12"){
           alert("정답입니다.");
+          location.href="../index.html"
         }else{
           alert("틀렸습니다.")
         }
       }
       function go_back(){
         window.history.back();
+      }
+      function progress() {
+        document.getElementById('pb').value = '20';
       }
     </script>
   </head>
