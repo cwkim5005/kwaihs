@@ -60,7 +60,7 @@ table{
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   text-align: center;
-}
+} 
 #enter{
   display: block;
   margin: auto;
@@ -72,4 +72,4 @@ table{
   font-weight: bold;
   font-size: large;
   color: #101820
-} 
+}
