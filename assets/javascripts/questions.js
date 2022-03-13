@@ -11,9 +11,9 @@ function getAnswer(i){
     else if(i == 33){ //문제 4번
       location.href="../scripts2/t4.html"
     }
-    else if(i == "나는 박사의 부활을 바란다"){ //문제 4번
+    else if(i == "나는 박사의 부활을 바란다"){ //문제 5번
       location.href="../scripts2/t5.html"
-    }else if(i == "KA8J"){ //문제 4번
+    }else if(i == "KA8J"){ //문제 6번
       location.href="../scripts2/t6.html"
     }
   }else{
