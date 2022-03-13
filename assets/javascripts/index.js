@@ -20,4 +20,4 @@ function getAnswer(){
 }
 function progress() {
   document.getElementById('pb').value = '20';
-}
+} 

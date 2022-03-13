@@ -19,4 +19,4 @@ function getAnswer(i){
   }else{
     alert("틀렸습니다.")
   }
-}
+} 
