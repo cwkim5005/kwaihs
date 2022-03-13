@@ -7,89 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
-    <style>
-      *{
-        font-family: 'Song Myung', serif;
-        color: #1a7a4c
-      }
-      body{
-        background-color: #101820
-      }
-      p{
-        line-height:150%;
-      }
-      h1{
-        text-align: center;
-        color: #C7D4CA
-      }
-      h2{
-        text-align: center;
-        font-size: x-large;
-      }
-      img{
-        text-align: center;
-        display: block;
-        margin: auto;
-      }
-      p{
-        text-align: center;
-        font-size: large;
-      }
-      #blank{
-        display: block;
-        margin: auto;
-        width: 250px;
-        height: 50px;
-        border-radius: 0px;
-        border-width: medium;
-        font-weight: bold;
-        font-size: large;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        text-align: center;
-      }
-      #button{
-        display: block;
-        margin: auto;
-        width: 100px;
-        height: 60px;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-width: medium;
-        font-weight: bold;
-        font-size: large;
-        color: #101820
-      }
-      table{
-        text-align: center;
-        margin: auto;
-      }
-    </style>
-    <script>
-      var progress_bar = 0
-      function getAnswer(){
-        if(password.answer.value == "문제 1번"){
-          location.href="scripts1/h1.html"
-        }else if (password.answer.value == "문제 2번") {
-          location.href="scripts1/h2.html"
-        }else if (password.answer.value == "문제 3번") {
-          location.href="scripts1/h3.html"
-        }else if (password.answer.value == "문제 4번") {
-          location.href="scripts1/h4.html"
-        }else if (password.answer.value == "문제 5번") {
-          location.href="scripts1/h5.html"
-        }else if (password.answer.value == "문제 6번") {
-          location.href="scripts1/h6.html"
-        }else if (password.answer.value == "문제 7번") {
-          location.href="scripts1/h7.html"
-        }else{
-          alert("비밀번호가 틀렸습니다.")
-        }
-      }
-      function progress() {
-        document.getElementById('pb').value = '20';
-      }
-    </script>
+    <link rel="stylesheet" href="assets/stylesheets/scripts.css">
+    <script src="assets/javascripts/index.js"></script>
   </head>
   <body>
     <h1>좀비를 피해서 도망가</h1>
@@ -113,7 +32,7 @@
             </datalist>
           </td>
           <td>
-            <input type="button" value="확인" onClick="getAnswer()" id="button">
+            <input type="button" value="확인" onClick="getAnswer()" id="enter">
           </td>
         </tr>
       </table>

@@ -7,80 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
-    <style>
-      *{
-        font-family: 'Song Myung', serif;
-        color: #1a7a4c
-      }
-      body{
-        background-color: #101820
-      }
-      p{
-        line-height:150%;
-      }
-      h1{
-        text-align: center;
-        color: #C7D4CA
-      }
-      h2{
-        text-align: center;
-        font-size: x-large;
-      }
-      img{
-        text-align: center;
-        display: block;
-        margin: auto;
-      }
-      p{
-        text-align: center;
-        font-size: large;
-      }
-      strong{
-        color: #C7D4CA
-      }
-      #answer{
-        display: block;
-        margin: auto;
-        width: 250px;
-        height: 50px;
-        border-radius: 0px;
-        border-width: medium;
-        font-weight: bold;
-        font-size: large;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        text-align: center;
-      }
-      #button{
-        display: block;
-        margin: auto;
-        width: 100px;
-        height: 60px;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-width: medium;
-        font-weight: bold;
-        font-size: large;
-        color: #101820
-      }
-      table{
-        text-align: center;
-        margin: auto;
-      }
-    </style>
-    <script>
-      function getAnswer(){
-        if(quiz.answer.value == "12"){
-          alert("정답입니다.");
-          location.href="../index.html"
-        }else{
-          alert("틀렸습니다.")
-        }
-      }
-      function go_back(){
-        window.history.back();
-      }
-    </script>
+    <link rel="stylesheet" href="../assets/stylesheets/scripts.css">
+    <script src="../assets/javascripts/questions.js"></script>
   </head>
   <body>
     <h1>문제 1번</h1>
@@ -95,10 +23,10 @@
       <table>
         <tr>
           <td>
-            <input type="text" name="answer" id="answer"/>
+            <input type="text" name="answer" id="blank"/>
           </td>
           <td>
-            <input type="button" value="정답 확인" onClick="getAnswer()" id="button">
+            <input type="button" value="정답 확인" onClick="getAnswer(12)" id="enter">
           </td>
         </tr>
       </table>
